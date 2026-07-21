@@ -5,7 +5,7 @@ import (
 	"slices"
 	"sync"
 
-	"github.com/uhppoted/uhppote-core/types"
+	"codeberg.org/uhppoted/uhppoted-core/types"
 )
 
 var rules = map[types.AntiPassback]map[uint8]struct {

@@ -9,13 +9,13 @@ import (
 	"reflect"
 	"time"
 
-	codec "github.com/uhppoted/uhppote-core/encoding/UTO311-L0x"
-	"github.com/uhppoted/uhppote-core/messages"
+	codec "codeberg.org/uhppoted/uhppoted-core/encoding/UTO311-L0x"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
 
-	"github.com/uhppoted/uhppote-simulator/log"
-	"github.com/uhppoted/uhppote-simulator/rest"
-	"github.com/uhppoted/uhppote-simulator/simulator"
-	"github.com/uhppoted/uhppote-simulator/simulator/UT0311L04"
+	"codeberg.org/uhppoted/uhppoted-simulator/log"
+	"codeberg.org/uhppoted/uhppoted-simulator/rest"
+	"codeberg.org/uhppoted/uhppoted-simulator/simulator"
+	"codeberg.org/uhppoted/uhppoted-simulator/simulator/UT0311L04"
 )
 
 var debug bool = false

@@ -1,7 +1,7 @@
 package simulator
 
 import (
-	"github.com/uhppoted/uhppote-simulator/simulator/UT0311L04"
+	"codeberg.org/uhppoted/uhppoted-simulator/simulator/UT0311L04"
 )
 
 type DeviceList struct {

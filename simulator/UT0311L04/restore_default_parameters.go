@@ -5,10 +5,10 @@ import (
 	"net"
 	"net/netip"
 
-	"github.com/uhppoted/uhppote-core/messages"
-	"github.com/uhppoted/uhppote-core/types"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/types"
 
-	"github.com/uhppoted/uhppote-simulator/entities"
+	"codeberg.org/uhppoted/uhppoted-simulator/entities"
 )
 
 func (s *UT0311L04) restoreDefaultParameters(request *messages.RestoreDefaultParametersRequest) (*messages.RestoreDefaultParametersResponse, error) {

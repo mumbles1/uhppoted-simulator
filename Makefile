@@ -26,14 +26,14 @@ clean:
 	rm -rf bin
 
 update:
-	go get -u github.com/uhppoted/uhppote-core@main
-	go get -u github.com/uhppoted/uhppoted-lib@main
+	go get -u codeberg.org/uhppoted/uhppoted-core@main
+	go get -u codeberg.org/uhppoted/uhppoted-lib@main
 	go mod tidy
 	go fix ./...
 
 update-release:
-	go get -u github.com/uhppoted/uhppote-core
-	go get -u github.com/uhppoted/uhppoted-lib
+	go get -u codeberg.org/uhppoted/uhppoted-core
+	go get -u codeberg.org/uhppoted/uhppoted-lib
 	go mod tidy
 	go fix ./...
 
@@ -102,11 +102,12 @@ publish: release
 	                               --draft --prerelease --title "$(VERSION)-beta" --notes-file release-notes.md
 
 debug:
-	curl -X POST "http://127.0.0.1:8000/uhppote/simulator/405419896/swipe" -H "accept: application/json" -H "Content-Type: application/json" -d '{"door":1, "card-number":10058400,"direction":1}'
-	curl -X POST "http://127.0.0.1:8000/uhppote/simulator/405419896/swipe" -H "accept: application/json" -H "Content-Type: application/json" -d '{"door":1, "card-number":10058400,"direction":1}'
+# 	curl -X POST "http://127.0.0.1:8000/uhppote/simulator/405419896/swipe" -H "accept: application/json" -H "Content-Type: application/json" -d '{"door":1, "card-number":10058400,"direction":1}'
+# 	curl -X POST "http://127.0.0.1:8000/uhppote/simulator/405419896/swipe" -H "accept: application/json" -H "Content-Type: application/json" -d '{"door":1, "card-number":10058400,"direction":1}'
+	curl -X POST "http://127.0.0.1:8000/uhppote/simulator/201020304/door/1" -H "accept: application/json" -H "Content-Type: application/json" -d '{"action":"button", "duration":10}'
 
 delve: build
-	dlv debug github.com/uhppoted/uhppote-simulator/cmd/uhppote-simulator -- --bind 0.0.0.0:60000 --rest 0.0.0.0:8000 --devices "./workdir/debug/controllers"
+	dlv debug codeberg.org/uhppoted/uhppoted-simulator/cmd/uhppote-simulator -- --bind 0.0.0.0:60000 --rest 0.0.0.0:8000 --devices "./workdir/debug/controllers"
 
 godoc:
 	godoc -http=:80	-index_interval=60s

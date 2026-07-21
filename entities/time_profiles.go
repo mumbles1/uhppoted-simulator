@@ -1,7 +1,7 @@
 package entities
 
 import (
-	"github.com/uhppoted/uhppote-core/types"
+	"codeberg.org/uhppoted/uhppoted-core/types"
 )
 
 type TimeProfiles map[uint8]types.TimeProfile

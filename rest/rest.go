@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/uhppoted/uhppote-simulator/entities"
-	"github.com/uhppoted/uhppote-simulator/simulator"
+	"codeberg.org/uhppoted/uhppoted-simulator/entities"
+	"codeberg.org/uhppoted/uhppoted-simulator/simulator"
 )
 
 type Device struct {

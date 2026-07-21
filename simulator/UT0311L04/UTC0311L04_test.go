@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/uhppoted/uhppote-core/messages"
-	"github.com/uhppoted/uhppote-core/types"
-	"github.com/uhppoted/uhppote-simulator/entities"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/types"
+	"codeberg.org/uhppoted/uhppoted-simulator/entities"
 )
 
 func TestNewUT0311L04(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/uhppoted/uhppote-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
 )
 
 func (s *UT0311L04) setListener(request *messages.SetListenerRequest) (*messages.SetListenerResponse, error) {

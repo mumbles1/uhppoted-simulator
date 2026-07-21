@@ -1,7 +1,7 @@
 package UT0311L04
 
 import (
-	"github.com/uhppoted/uhppote-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
 )
 
 func (s *UT0311L04) getCards(request *messages.GetCardsRequest) (*messages.GetCardsResponse, error) {

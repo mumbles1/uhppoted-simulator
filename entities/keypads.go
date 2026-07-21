@@ -3,7 +3,7 @@ package entities
 import (
 	"encoding/json"
 
-	"github.com/uhppoted/uhppote-simulator/log"
+	"codeberg.org/uhppoted/uhppoted-simulator/log"
 )
 
 type Keypad uint8

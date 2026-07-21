@@ -3,7 +3,7 @@ package UT0311L04
 import (
 	"fmt"
 
-	"github.com/uhppoted/uhppote-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
 )
 
 func (s *UT0311L04) setEventIndex(request *messages.SetEventIndexRequest) (*messages.SetEventIndexResponse, error) {

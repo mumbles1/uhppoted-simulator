@@ -8,9 +8,9 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/uhppoted/uhppote-core/types"
+	"codeberg.org/uhppoted/uhppoted-core/types"
 
-	"github.com/uhppoted/uhppote-simulator/simulator"
+	"codeberg.org/uhppoted/uhppoted-simulator/simulator"
 )
 
 func cards(ctx *simulator.Context, w http.ResponseWriter, r *http.Request) {

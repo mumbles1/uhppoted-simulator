@@ -1,8 +1,8 @@
-module github.com/uhppoted/uhppote-simulator
+module codeberg.org/uhppoted/uhppoted-simulator
 
 go 1.26
 
 require (
-	github.com/uhppoted/uhppote-core v0.9.1-0.20260409153512-14a0a48412ef
-	github.com/uhppoted/uhppoted-lib v0.9.1-0.20260409153617-bbdbd42a82a8
+	codeberg.org/uhppoted/uhppoted-core v0.0.0-20260720171551-807ffedb65bd
+	codeberg.org/uhppoted/uhppoted-lib v0.0.0-20260721134957-2397d188319f
 )

@@ -4,7 +4,7 @@ import (
 	"net/netip"
 	"testing"
 
-	"github.com/uhppoted/uhppote-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
 )
 
 func TestHandleGetListener(t *testing.T) {

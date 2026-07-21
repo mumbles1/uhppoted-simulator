@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	lib "github.com/uhppoted/uhppote-core/types"
+	lib "codeberg.org/uhppoted/uhppoted-core/types"
 )
 
 func TestTaskListToJSON(t *testing.T) {

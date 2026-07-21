@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/uhppoted/uhppote-core/messages"
-	"github.com/uhppoted/uhppote-simulator/entities"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
+	"codeberg.org/uhppoted/uhppoted-simulator/entities"
 )
 
 func TestSetInterlock1(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/uhppoted/uhppote-core/messages"
-	"github.com/uhppoted/uhppote-core/types"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/types"
 )
 
 func (s *UT0311L04) setTimeProfile(request *messages.SetTimeProfileRequest) (*messages.SetTimeProfileResponse, error) {

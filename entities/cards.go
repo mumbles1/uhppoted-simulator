@@ -6,7 +6,7 @@ import (
 	"iter"
 	"strings"
 
-	"github.com/uhppoted/uhppote-core/types"
+	"codeberg.org/uhppoted/uhppoted-core/types"
 )
 
 type Card struct {

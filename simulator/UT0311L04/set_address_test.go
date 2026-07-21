@@ -4,7 +4,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/uhppoted/uhppote-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
 )
 
 func TestHandleSetAddress(t *testing.T) {

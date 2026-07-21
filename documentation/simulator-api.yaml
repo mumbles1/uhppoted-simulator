@@ -6,7 +6,7 @@ info:
   description: "REST API for the UHPPOTE simulator command interface"
   license:
     name: "MIT"
-    url: "https://github.com/uhppoted/uhppote-simulator/blob/master/LICENSE"
+    url: "https://codeberg.org/uhppoted/uhppoted-simulator/blob/master/LICENSE"
     
 servers:    
   - url: "http://127.0.0.1:8000/uhppote"

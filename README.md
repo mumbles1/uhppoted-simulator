@@ -89,20 +89,20 @@ FROM ghcr.io/uhppoted/simulator:latest
 Assuming you have `Go` and `make` installed:
 
 ```
-git clone https://github.com/uhppoted/uhppote-simulator.git
+git clone https://codeberg.org/uhppoted/uhppoted-simulator.git
 cd uhppote-simulator
 make build
 ```
 
 If you prefer not to use `make`:
 ```
-git clone https://github.com/uhppoted/uhppote-simulator.git
+git clone https://codeberg.org/uhppoted/uhppoted-simulator.git
 cd uhppote-simulator
 mkdir bin
 go build -trimpath -o bin ./...
 ```
 
-## uhppote-simulator
+## uhppoted-simulator
 
 Supported `uhppote` functions:
 - FindDevices
@@ -171,7 +171,7 @@ The actions may be invoked:
 - using the [REST.py](scripts) script
 - using one of the many [Postman-like](https://www.postman.com/) tools available. Postman scripts can be found in
   the [scripts](scripts) folder
-- using the [Swagger Editor](https://editor.swagger.io) with the [OpenAPI](https://github.com/uhppoted/uhppote-simulator/blob/main/documentation/simulator-api.yaml) YAML file.
+- using the [Swagger Editor](https://editor.swagger.io) with the [OpenAPI](https://codeberg.org/uhppoted/uhppoted-simulator/blob/main/documentation/simulator-api.yaml) YAML file.
 
 The default port is 8000.
 

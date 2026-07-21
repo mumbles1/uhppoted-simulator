@@ -3,7 +3,7 @@ package UT0311L04
 import (
 	"testing"
 
-	"github.com/uhppoted/uhppote-core/messages"
+	"codeberg.org/uhppoted/uhppoted-core/messages"
 )
 
 func TestHandleDeleteCardRequest(t *testing.T) {

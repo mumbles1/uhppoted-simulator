@@ -9,6 +9,8 @@
 ### Updated
 1. Updated to Go version 1.26.
 2. Updated _modern Go_ with `go fix`.
+3. Reworked access logic for _first card_.
+4. Migrated from _github.com/uhppoted/uhppote-simulator_ to _codeberg.org/uhppoted/uhppoted-simulator_.
 
 
 ## [0.9.0](https://github.com/uhppoted/uhppote-simulator/releases/tag/v0.9.0) - 2026-01-27
