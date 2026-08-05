@@ -1,5 +1,7 @@
+<!--
 ![build](https://github.com/uhppoted/uhppote-simulator/workflows/build/badge.svg)
 ![ghcr](https://github.com/uhppoted/uhppote-simulator/workflows/ghcr/badge.svg)
+-->
 
 # uhppote-simulator
 
@@ -39,7 +41,7 @@ Supported operating systems:
 
 ### Current release
 
-**[v0.9.0](https://github.com/uhppoted/uhppote-simulator/releases/tag/v0.9.0) - 2026-01-27**
+**[v0.9.0](https://codeberg.org/uhppoted/uhppote-simulator/releases/tag/v0.9.0) - 2026-01-27**
 1. Added _reset_ action to generate a _controller reset_ event.
 2. Updated to Go 1.25.
 
