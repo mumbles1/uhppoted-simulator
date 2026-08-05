@@ -50,9 +50,9 @@ Supported operating systems:
 
 ### Docker
 
-A public _Docker_ image is published to [ghcr.io](https://github.com/uhppoted?tab=packages&repo_name=uhppote-simulator). The image:
-- includes a _getting started_ sample controller\
-- is configured to store emulated controllers in /usr/local/etc/uhppoted/simulator
+A public _Docker_ image is published to [docker.io](https://hub.docker.com/repository/docker/uhppoted/simulator/general). The image:
+- includes a _getting started_ sample controller
+- is configured to store emulated controllers in _/usr/local/etc/uhppoted/simulator_
 
 #### `docker compose`
 
@@ -71,10 +71,10 @@ The emulated controllers can be managed using the [REST API](#rest-api).
 
 To start a simulator using Docker `run`:
 ```
-docker pull ghcr.io/uhppoted/simulator:latest
+docker pull uhppoted/simulator:latest
 docker run --detach --publish 8000:8000 --publish 60000:60000/udp --name simulator \
            --mount source=uhppoted,target=/usr/local/etc/uhppoted \
-           --rm ghcr.io/uhppoted/simulator
+           --rm uhppoted/simulator
 ```
 
 The emulated controllers can be managed using the REST API [REST API](#rest-api).
@@ -83,7 +83,7 @@ The emulated controllers can be managed using the REST API [REST API](#rest-api)
 
 For inclusion in a Dockerfile:
 ```
-FROM ghcr.io/uhppoted/simulator:latest
+FROM uhppoted/simulator:latest
 ```
 
 ### Building from source

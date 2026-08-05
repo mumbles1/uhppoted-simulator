@@ -4,7 +4,7 @@ services:
   uhppoted-simulator:
     container_name: uhppoted-simulator
     restart: unless-stopped
-    image: ghcr.io/uhppoted/simulator:latest
+    image: uhppoted/simulator:latest
     volumes:
       - uhppoted:/usr/local/etc/uhppoted
     ports:

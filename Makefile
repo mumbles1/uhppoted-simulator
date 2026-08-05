@@ -212,7 +212,7 @@ rest-list-controllers:
 rest-put-card:
 	python3 scripts/REST.py put-card --controller 405419896 --card 10058400 --start-date 2024-01-01 --end-date 2024-12-31 --doors 1,2,3 --PIN 7531
 
-docker: docker-dev docker-ghcr
+docker: docker-dev docker-dockerhub
 	cd docker && find . -name .DS_Store -delete && rm -f compose.zip && zip --recurse-paths compose.zip compose
 
 docker-dev: build
@@ -242,10 +242,9 @@ docker-dockerhub: build
 	cd dist/docker/dockerhub && docker build --no-cache -f Dockerfile -t $(DOCKER) .
 
 docker-publish:
-# 	docker login -u uhppoted -p $(PAT)
 	make docker-dockerhub DOCKER=uhppoted/simulator:${VERSION}
 	docker images
-# 	docker push uhppoted/simulator:${VERSION}
+	docker login -u uhppoted && docker push uhppoted/simulator:${VERSION}
 
 docker-run-dev:
 	docker run --publish 8000:8000 --publish 60000:60000 --publish 60000:60000/udp --name simulator --rm uhppoted/simulator-dev
