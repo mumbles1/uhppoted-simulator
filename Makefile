@@ -6,7 +6,8 @@ PIN       ?= 7531
 PASSCODE  ?= 654321
 DOOR      ?= 3
 DEBUG     ?= --debug
-DOCKER    ?= ghcr.io/uhppoted/simulator:latest
+DOCKER    ?= uhppoted/simulator:latest
+GHCR      ?= ghcr.io/uhppoted/simulator:latest
 DEBUG     ?= --debug
 
 CLI = ../uhppote-cli/bin/uhppote-cli
@@ -230,7 +231,21 @@ docker-ghcr: build
 	env GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -trimpath -o dist/docker/ghcr ./...
 	cp docker/ghcr/Dockerfile     dist/docker/ghcr
 	cp docker/ghcr/405419896.json dist/docker/ghcr
-	cd dist/docker/ghcr && docker build --no-cache -f Dockerfile -t $(DOCKER) .
+	cd dist/docker/ghcr && docker build --no-cache -f Dockerfile -t $(GHCR) .
+
+docker-dockerhub: build
+	rm -rf dist/docker/dockerhub/*
+	mkdir -p dist/docker/dockerhub
+	env GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -trimpath -o dist/docker/dockerhub ./...
+	cp docker/dockerhub/Dockerfile     dist/docker/dockerhub
+	cp docker/dockerhub/405419896.json dist/docker/dockerhub
+	cd dist/docker/dockerhub && docker build --no-cache -f Dockerfile -t $(DOCKER) .
+
+docker-publish:
+# 	docker login -u uhppoted -p $(PAT)
+	make docker-dockerhub DOCKER=uhppoted/simulator:${VERSION}
+	docker images
+# 	docker push uhppoted/simulator:${VERSION}
 
 docker-run-dev:
 	docker run --publish 8000:8000 --publish 60000:60000 --publish 60000:60000/udp --name simulator --rm uhppoted/simulator-dev
