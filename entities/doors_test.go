@@ -305,8 +305,8 @@ func TestDoorsMarshalJSON(t *testing.T) {
     "firstcard": {
       "start-time": "08:30",
       "end-time": "16:45",
-      "active-state": "normally open",
-      "inactive-state": "normally closed",
+      "active-mode": "normally open",
+      "inactive-mode": "normally closed",
       "weekdays": "Monday,Tuesday,Friday"
     }
   },
@@ -349,8 +349,8 @@ func TestDoorsUnmarshalJSON(t *testing.T) {
     "firstcard": {
       "start-time": "08:30",
       "end-time": "16:45",
-      "active-state": "normally open",
-      "inactive-state": "normally closed",
+      "active-mode": "normally open",
+      "inactive-mode": "normally closed",
       "weekdays": "Monday,Tuesday,Friday"
     }
   },
