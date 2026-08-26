@@ -90,16 +90,14 @@ func run(ctx *simulator.Context, udp *net.UDPConn, tcp *net.TCPListener, wait ch
 	UT0311L04.SetOnEvent(g)
 
 	go func() {
-		if err := udpListenAndServe(ctx, udp); err != nil {
-			errorf("udp", "%v", err)
-		}
+		// staticcheck::SA4023
+		errorf("udp", "%v", udpListenAndServe(ctx, udp))
 		wait <- 0
 	}()
 
 	go func() {
-		if err := tcpListenAndServe(ctx, tcp); err != nil {
-			errorf("tcp", "%v", err)
-		}
+		// staticcheck::SA4023
+		errorf("tcp", "%v", tcpListenAndServe(ctx, tcp))
 		wait <- 0
 	}()
 
